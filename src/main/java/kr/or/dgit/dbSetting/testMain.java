@@ -3,10 +3,11 @@ package kr.or.dgit.dbSetting;
 
 import java.sql.SQLException;
 import java.util.Map.Entry;
-import java.util.Properties;
 
-import kr.or.dgit.erp_application.jdbc.DBcon;
-import kr.or.dgit.erp_application.jdbc.LoadProperties;
+import kr.or.dgit.dbSetting.jdbc.DBcon;
+import kr.or.dgit.dbSetting.jdbc.LoadProperties;
+
+import java.util.Properties;
 
 public class testMain {
 	public static void main(String[] args) throws SQLException, InterruptedException{

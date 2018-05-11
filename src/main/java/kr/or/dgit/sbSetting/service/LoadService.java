@@ -4,8 +4,8 @@ import java.io.File;
 import java.util.Properties;
 
 import kr.or.dgit.dbSetting.dao.ExecuteSql;
-import kr.or.dgit.erp_application.jdbc.DBcon;
-import kr.or.dgit.erp_application.jdbc.LoadProperties;
+import kr.or.dgit.dbSetting.jdbc.DBcon;
+import kr.or.dgit.dbSetting.jdbc.LoadProperties;
 
 public class LoadService implements DaoService {
 	private static final LoadService instance = new LoadService();
