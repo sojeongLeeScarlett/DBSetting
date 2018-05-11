@@ -41,6 +41,6 @@ ALTER TABLE pdintro
 
 
 -- create and grant user
-grant select, insert, update,delete on mysql.* to 'coffeeprice' identified by '1234';
+grant select, insert, update,delete on mysql.* to 'coffeeprice' identified by 'rootroot';
 
 
