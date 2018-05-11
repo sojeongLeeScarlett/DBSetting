@@ -1,4 +1,4 @@
-package kr.or.dgit.erp_setting.service;
+package kr.or.dgit.sbSetting.service;
 
 public interface DaoService {
 	void service();

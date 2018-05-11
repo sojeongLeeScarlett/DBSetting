@@ -1,4 +1,4 @@
-package kr.or.dgit.erp_setting;
+package kr.or.dgit.dbSetting;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -8,10 +8,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import kr.or.dgit.erp_setting.service.BackupService;
-import kr.or.dgit.erp_setting.service.DaoService;
-import kr.or.dgit.erp_setting.service.InitService;
-import kr.or.dgit.erp_setting.service.LoadService;
+import kr.or.dgit.sbSetting.service.BackupService;
+import kr.or.dgit.sbSetting.service.DaoService;
+import kr.or.dgit.sbSetting.service.InitService;
+import kr.or.dgit.sbSetting.service.LoadService;
 
 import java.awt.GridLayout;
 import javax.swing.JButton;

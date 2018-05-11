@@ -1,4 +1,4 @@
-package kr.or.dgit.erp_setting.service;
+package kr.or.dgit.sbSetting.service;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import kr.or.dgit.erp_setting.dao.ExecuteSql;
+import kr.or.dgit.dbSetting.dao.ExecuteSql;
 
 public class InitService implements DaoService {
 	private static final InitService instance = new InitService();

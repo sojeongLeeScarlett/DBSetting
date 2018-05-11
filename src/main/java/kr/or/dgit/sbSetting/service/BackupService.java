@@ -1,4 +1,4 @@
-package kr.or.dgit.erp_setting.service;
+package kr.or.dgit.sbSetting.service;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,9 +10,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
 
+import kr.or.dgit.dbSetting.dao.ExecuteSql;
 import kr.or.dgit.erp_application.jdbc.DBcon;
 import kr.or.dgit.erp_application.jdbc.LoadProperties;
-import kr.or.dgit.erp_setting.dao.ExecuteSql;
 
 public class BackupService implements DaoService{
 	private static final BackupService instance = new BackupService();

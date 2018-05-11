@@ -1,4 +1,4 @@
-package kr.or.dgit.erp_setting;
+package kr.or.dgit.dbSetting;
 
 
 import java.sql.SQLException;

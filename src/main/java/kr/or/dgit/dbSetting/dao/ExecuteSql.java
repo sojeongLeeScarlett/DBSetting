@@ -1,4 +1,4 @@
-package kr.or.dgit.erp_setting.dao;
+package kr.or.dgit.dbSetting.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
