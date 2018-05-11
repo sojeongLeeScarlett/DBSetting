@@ -20,7 +20,7 @@ public class InitService implements DaoService {
 
 	@Override
 	public void service() {
-		File f = new File(System.getProperty("user.dir")+"\\resources\\create_sql.txt");
+		File f = new File(System.getProperty("user.dir")+"\\src\\main\\resources\\sql\\create_sql.txt");
 		try(BufferedReader br = new BufferedReader(new FileReader(f));) {
 			StringBuilder sb = new StringBuilder();
 			String line = null;

@@ -1,0 +1,46 @@
+
+
+-- 커피전문점판매실적
+DROP SCHEMA IF EXISTS coffeeprice;
+
+-- 커피전문점판매실적
+CREATE SCHEMA coffeeprice;
+
+use coffeeprice;
+
+-- 제품명 
+CREATE TABLE product (
+	pdCode VARCHAR(50) NOT NULL COMMENT '제품코드',
+	pdName VARCHAR(50) NULL     COMMENT '제품명'
+)
+COMMENT '제품명 ';
+
+-- 제품명 
+ALTER TABLE product
+	ADD CONSTRAINT PK_product
+		PRIMARY KEY (
+			pdCode
+		);
+
+-- 제품상세
+CREATE TABLE pdintro (
+	pdCode      VARCHAR(50) NOT NULL COMMENT '제품코드',
+	pdName      VARCHAR(50) NULL     COMMENT '제품명',
+	pdUnitprice INTEGER(8)  NULL     COMMENT '제품단가',
+	pdUnitsales INTEGER(8)  NULL     COMMENT '판매수량',
+	pdPermargin INTEGER(2)  NULL     COMMENT '마진율'
+)
+COMMENT '제품상세';
+
+-- 제품상세
+ALTER TABLE pdintro
+	ADD CONSTRAINT PK_pdintro
+		PRIMARY KEY (
+			pdCode
+		);
+
+
+-- create and grant user
+grant select, insert, update,delete on mysql.* to 'coffeeprice' identified by 'rootroot';
+
+
