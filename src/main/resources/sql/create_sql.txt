@@ -1,5 +1,10 @@
 -- 내 스키마
-DROP SCHEMA IF EXISTS MY_SCHEMA;
+DROP SCHEMA IF EXISTS coffee_project;
+
+-- 커피전문점판매실적
+CREATE SCHEMA coffee_project;
+
+use coffee_project;
 
 -- 제품
 CREATE TABLE product (
@@ -43,8 +48,6 @@ ALTER TABLE sale
 			code
 		);
 		
-select*from product;
-select*from sale;
 
 -- 권 한 설정
 grant select, insert, update,delete on mysql.* to 'coffee_project' identified by 'rootroot';
