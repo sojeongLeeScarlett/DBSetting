@@ -9,6 +9,11 @@
 // Apply the java-library plugin to add support for Java Library
 apply plugin: 'java'
 apply plugin:'eclipse'
+apply plugin:'java-library'
+
+
+
+sourceCompatibility=1.8
 
 
 //인코딩 지정

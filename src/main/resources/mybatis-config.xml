@@ -7,9 +7,9 @@
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
 	</settings>
 
-	<typeAliases>
+	<!-- <typeAliases>
 		<package name="kr.or.dgit.coffee_application.dto" />
-	</typeAliases>
+	</typeAliases> -->
 	
 	
 	<environments default="development">
