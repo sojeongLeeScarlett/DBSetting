@@ -1,46 +1,50 @@
+-- 내 스키마
+DROP SCHEMA IF EXISTS MY_SCHEMA;
 
-
--- 커피전문점판매실적
-DROP SCHEMA IF EXISTS coffeeprice;
-
--- 커피전문점판매실적
-CREATE SCHEMA coffeeprice;
-
-use coffeeprice;
-
--- 제품명 
+-- 제품
 CREATE TABLE product (
-	pdCode VARCHAR(50) NOT NULL COMMENT '제품코드',
-	pdName VARCHAR(50) NULL     COMMENT '제품명'
+	code CHAR(4)     NOT NULL COMMENT 'code',
+	name VARCHAR(20) NULL     COMMENT 'name'
 )
-COMMENT '제품명 ';
+COMMENT '제품';
 
--- 제품명 
+-- 제품
 ALTER TABLE product
 	ADD CONSTRAINT PK_product
 		PRIMARY KEY (
-			pdCode
+			code
 		);
 
--- 제품상세
-CREATE TABLE pdintro (
-	pdCode      VARCHAR(50) NOT NULL COMMENT '제품코드',
-	pdName      VARCHAR(50) NULL     COMMENT '제품명',
-	pdUnitprice INTEGER(8)  NULL     COMMENT '제품단가',
-	pdUnitsales INTEGER(8)  NULL     COMMENT '판매수량',
-	pdPermargin INTEGER(2)  NULL     COMMENT '마진율'
+-- 판매현황
+CREATE TABLE sale (
+	no         INT(11) NOT NULL COMMENT 'no',
+	code       CHAR(4) NOT NULL COMMENT 'code',
+	price      INT(11) NOT NULL COMMENT 'price',
+	saleCnt    INT(11) NOT NULL COMMENT 'saleCnt',
+	marginRate INT(11) NOT NULL COMMENT 'marginRate'
 )
-COMMENT '제품상세';
+COMMENT '판매현황';
 
--- 제품상세
-ALTER TABLE pdintro
-	ADD CONSTRAINT PK_pdintro
+-- 판매현황
+ALTER TABLE sale
+	ADD CONSTRAINT PK_sale
 		PRIMARY KEY (
-			pdCode
+			no,
+			code
 		);
 
+-- 판매현황
+ALTER TABLE sale
+	ADD CONSTRAINT FK_product_TO_sale
+		FOREIGN KEY (
+			code
+		)
+		REFERENCES product (
+			code
+		);
+		
+select*from product;
+select*from sale;
 
--- create and grant user
-grant select, insert, update,delete on mysql.* to 'coffeeprice' identified by 'rootroot';
-
-
+-- 권 한 설정
+grant select, insert, update,delete on mysql.* to 'coffee_project' identified by 'rootroot';

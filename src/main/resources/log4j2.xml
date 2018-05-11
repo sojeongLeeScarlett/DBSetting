@@ -4,13 +4,13 @@
       <Console name="Console" target="SYSTEM_OUT">
          <PatternLayout pattern="%5p [%t] - %m%n" />
       </Console>
-      <File name="file" fileName="./logs/cerp_setting.log" append="false">
+      <File name="file" fileName="./logs/dbSetting.log" append="false">
          <PatternLayout pattern="%5p [%t] - %m%n" />
       </File>
    </Appenders>
 
    <Loggers>
-      <Logger name="kr.or.dgit.erp_setting" level="trace" additivity="false">
+      <Logger name="kr.or.dgit.dbSetting" level="trace" additivity="false">
          <AppenderRef ref="Console" />
          <!-- <AppenderRef ref="file" /> -->
       </Logger>
