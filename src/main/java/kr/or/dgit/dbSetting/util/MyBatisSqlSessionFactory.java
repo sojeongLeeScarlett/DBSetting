@@ -21,7 +21,7 @@ public class MyBatisSqlSessionFactory {
 				} catch (IOException e) {
 					// TODO: handle exception
 					e.printStackTrace();
-					throw new RuntimeException(e.getCause());
+					throw new RuntimeException(e.getCause()); 
 				}
 			}
 			return sqlSessionFactory;

@@ -13,7 +13,7 @@ public class testMain {
 		TestDBconnection();
 	}
 	private static void TestDBconnection() {
-		DBcon dbCon = DBcon.getInstance();
+		DBcon dbCon = DBcon.getInstance(); 
 		System.out.println(dbCon);
 		
 		dbCon =  DBcon.getInstance();

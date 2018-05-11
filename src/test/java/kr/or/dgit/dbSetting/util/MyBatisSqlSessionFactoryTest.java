@@ -13,7 +13,7 @@ public class MyBatisSqlSessionFactoryTest {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		factory = MyBatisSqlSessionFactory.getSqlSessionFactory();
+		factory = MyBatisSqlSessionFactory.getSqlSessionFactory(); 
 	}
 
 	@After
